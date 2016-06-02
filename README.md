@@ -3,7 +3,7 @@ Those are the HTML Pages and scrips used for the Web controlled robot based on R
 
 The project was divided in two parts and published as Instaructables:
 
-1. http://www.instructables.com/id/IoT-Controlling-a-Raspberry-Pi-Robot-Over-Internet/
+http://www.instructables.com/id/IoT-Controlling-a-Raspberry-Pi-Robot-Over-Internet/
 In this instructable, we will create a fully controlled IoT Raspberry Pi Robot. The idea is to control the robot (or anything), using low level commands written with shell scripts commanded straight from the HTML page. Not using higher level languages as Python for example, makes the robot very responsive and quick to act.
 
 In this part of the project we will learn:
@@ -14,7 +14,8 @@ c) Make the RPi a WebServer
 d) Create a HTML to control the robot over internet
 
 If you want to go further and provide your robot with "vision", you can go to the second part of this tutorial:
-2. http://www.instructables.com/id/IoT-Raspberry-Pi-Video-Streamer-and-PanTilt-Camera/
+
+http://www.instructables.com/id/IoT-Raspberry-Pi-Video-Streamer-and-PanTilt-Camera/
 
 There, you will learn:
 
