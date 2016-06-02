@@ -1,0 +1,200 @@
+<html>
+<head>
+</head>
+
+<style>
+body {background-color: lightyellow}
+h1 {color:blue}
+
+button {
+	color: blue;
+	background:lightgrey;
+	border: 1px solid #000;
+	border-radius: 8px;
+	position: center;
+}
+
+</style>
+
+<body>
+
+<div style="text-align:center">
+
+<h1> MJRoBot RPi Web Robot Control   <img style="height: 100px"src="/images/robot52.png"> </h1>
+<br><br>
+
+<iframe src="http://10.0.1.31:9000/javascript_simple.html" frameborder="0" align="middle" width="640" height="480" align="middle" scrolling="no"></iframe>
+<br><br>
+
+<button style="height: 50px; width: 100px" onclick="lighton()"><img style="height: 40px"src="/images/lighton.png"></button>
+<img hspace="20" style="padding-left: 200px">
+<button style="height: 50px; width: 100px" onclick="lightoff()"><img style="height: 35px"src="/images/lightoff.png"></button>
+<br><br>
+
+<span style="display:inline-block;padding:5px;border:1px solid #fc0; font-size: 140%;font-weight: bold;">
+	<br>
+	<button style="height: 75px; width: 75px" onclick="forward()"><img style="height: 65px"src="/images/forward.png"></button>
+	<br><br><br><br>
+	<img hspace="10" style="padding-left: 5px">
+	<button style="height: 75px; width: 75px" onclick="left()"><img style="height: 65px"src="/images/left.png"></button>
+	<img hspace="20" style="padding-left: 10px">
+	<button style="height: 75px; width: 75px" onclick="stop()"><img style="height: 63px"src="/images/stop.png"></button>
+	<img hspace="20" style="padding-left: 10px">
+	<button style="height: 75px; width: 75px" onclick="right()"><img style="height: 65px"src="/images/right.png"></button>
+	<img hspace="10" style="padding-left: 5px">
+	<br><br><br><br>
+	<button style="height: 75px; width: 75px" onclick="reverse()"><img style="height: 65px"src="/images/reverse.png"></button>
+	<br><br><br>
+
+	<p>Motor speed control</p>
+	<img hspace="30" style="padding-left: 5px">
+	<button style="height: 50px; width: 50px; font-size: 18px" onclick="nospeed()">0</button>
+	<img hspace="30" style="padding-left: 20px">
+	<button style="height: 50px; width: 50px; font-size: 18px" onclick="lowspeed()">--</button>
+	<img hspace="30" style="padding-left: 20px">
+	<button style="height: 50px; width: 50px; font-size: 18px" onclick="regularspeed()">==</button>
+	<img hspace="30" style="padding-left: 20px">
+	<button style="height: 50px; width: 50px; font-size: 18px" onclick="highspeed()">++</button>
+	<img hspace="30" style="padding-left: 5px">
+	<br><br>
+</span>
+<br><br>
+
+<span style="display:inline-block;padding:5px;border:1px solid #fc0; font-size: 140%;font-weight: bold;">
+             
+        <p>Camera Tilt Angle</p>
+        <img hspace="18" style="padding-left: 5px">
+	<button style="height: 50px; width: 100px; font-size: 25px" onclick="downtilt()">-D</button>
+        <button style="height: 50px; width: 100px; font-size: 25px" onclick="downcentertilt()">D</button>
+        <button style="height: 50px; width: 100px; font-size: 25px" onclick="centertilt()">0</button>
+        <button style="height: 50px; width: 100px; font-size: 25px" onclick="upcentertilt()">U</button>
+        <button style="height: 50px; width: 100px; font-size: 25px" onclick="uptilt()">U+</button>
+        <img hspace="18" style="padding-left: 5px">
+	<br><br>
+        <p>Camera Pan Position</p>
+        <button style="height: 50px; width: 100px; font-size: 25px" onclick="leftpan()">+L</button>
+        <button style="height: 50px; width: 100px; font-size: 25px" onclick="leftCenterPan()">L</button>
+        <button style="height: 50px; width: 100px; font-size: 25px" onclick="centerpan()">0</button>
+        <button style="height: 50px; width: 100px; font-size: 25px" onclick="rightCenterPan()">R</button>
+        <button style="height: 50px; width: 100px; font-size: 25px" onclick="rightpan()">R+</button>
+        <p></p>
+</span>
+
+<script>
+var xmlhttp;
+xmlhttp=new XMLHttpRequest();
+
+function lighton()
+    {
+        xmlhttp.open("GET","cgi-bin/lighton.cgi",true);
+        xmlhttp.send();
+    }
+function lightoff()
+    {
+        xmlhttp.open("GET","cgi-bin/lightoff.cgi",true);
+        xmlhttp.send();
+    }
+function forward()
+{
+	xmlhttp.open("GET","cgi-bin/forward.cgi",true);
+	xmlhttp.send();
+}
+function stop()
+{
+	xmlhttp.open("GET","cgi-bin/stop.cgi",true);
+	xmlhttp.send();
+}
+function left()
+{
+	xmlhttp.open("GET","cgi-bin/left.cgi",true);
+	xmlhttp.send();
+}
+function right()
+{
+	xmlhttp.open("GET","cgi-bin/right.cgi",true);
+	xmlhttp.send();
+}
+function reverse()
+{
+	xmlhttp.open("GET","cgi-bin/reverse.cgi",true);
+	xmlhttp.send();
+}
+
+function lowspeed()
+{
+	xmlhttp.open("GET","cgi-bin/lowspeed.cgi",true);
+	xmlhttp.send();
+}
+function regularspeed()
+{
+	xmlhttp.open("GET","cgi-bin/regularspeed.cgi",true);
+	xmlhttp.send();
+}
+function highspeed()
+{
+	xmlhttp.open("GET","cgi-bin/highspeed.cgi",true);
+	xmlhttp.send();
+}
+function nospeed()
+{
+	xmlhttp.open("GET","cgi-bin/nospeed.cgi",true);
+	xmlhttp.send();
+}
+
+
+function downtilt()
+{
+    xmlhttp.open("GET","cgi-bin/downtilt.cgi",true);
+    xmlhttp.send();
+}
+function downcentertilt()
+{
+    xmlhttp.open("GET","cgi-bin/downcentertilt.cgi",true);
+    xmlhttp.send();
+}
+function centertilt()
+{
+    xmlhttp.open("GET","cgi-bin/centertilt.cgi",true);
+    xmlhttp.send();
+}
+function upcentertilt()
+{
+    xmlhttp.open("GET","cgi-bin/upcentertilt.cgi",true);
+    xmlhttp.send();
+}
+function uptilt()
+{
+    xmlhttp.open("GET","cgi-bin/uptilt.cgi",true);
+    xmlhttp.send();
+}
+function leftpan()
+{
+    xmlhttp.open("GET","cgi-bin/leftpan.cgi",true);
+    xmlhttp.send();
+}
+function leftCenterPan()
+{
+    xmlhttp.open("GET","cgi-bin/leftCenterPan.cgi",true);
+    xmlhttp.send();
+}
+function centerpan()
+{
+    xmlhttp.open("GET","cgi-bin/centerpan.cgi",true);
+    xmlhttp.send();
+}
+function rightCenterPan()
+{
+    xmlhttp.open("GET","cgi-bin/rightCenterPan.cgi",true);
+    xmlhttp.send();
+}
+function rightpan()
+{
+    xmlhttp.open("GET","cgi-bin/rightpan.cgi",true);
+    xmlhttp.send();
+        }
+        
+</script>
+
+</body>
+</html>
+
