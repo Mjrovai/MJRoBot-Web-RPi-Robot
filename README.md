@@ -9,7 +9,7 @@ In this instructable, we will create a fully controlled IoT Raspberry Pi Robot. 
 This 1st part of the project will cover "how to":
 
 a) Install and use the WiringPi library to control the RPi's GPIOs; 
-b) Control motors using an H-Bridge; 
+b) Control motors using an H-Bridge (circuit diagram: RPi_Web_controled_Robot_Motors.fzz);
 c) Make the RPi a WebServer; 
 d) Create a HTML to control the robot over internet; 
 
@@ -21,5 +21,5 @@ There, we will cover:
 
 a) How to stream video with a PiCam; 
 b) How to install and use ServoBlaster library; 
-c) How to control servo motors and build a PAM/TILT camera position mechanism; 
+c) How to control servo motors and build a PAM/TILT camera position mechanism (circuit diagram: RPi_Web_controled_Robot.fzz); 
 d) Create a HTML page to control the camera position over the internet; 
