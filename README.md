@@ -23,3 +23,7 @@ a) How to stream video with a PiCam;
 b) How to install and use ServoBlaster library; 
 c) How to control servo motors and build a PAM/TILT camera position mechanism (circuit diagram: RPi_Web_controled_Robot.fzz); 
 d) Create a HTML page to control the camera position over the internet; 
+<p> </p>
+<p>The block diagram shows the main components of the project.</p>
+<p> </p>
+<img src=https://github.com/Mjrovai/MJRoBot-Web-RPi-Robot/blob/master/full%20blockdiagram%20webrobot.png?raw=true alt="RPi Web Robot Block Diagram">
